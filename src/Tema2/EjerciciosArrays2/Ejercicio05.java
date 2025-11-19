@@ -40,11 +40,17 @@ for (int i = 0; i < 50; i++){
         }
     }
 }
-for (int i = 0; i < 100; i++){
-    if (numerosFaltan[i] == i){
-        numeroOrdenados[i] = numeroOrdenados[i] + i;
-    }
-}
+        // índice para llenar numeroOrdenados
+        int k = 0;
+
+        for (int i = 0; i < numerosFaltan.length; i++) {
+            // si el número NO está repetido
+            if (numerosFaltan[i] != 0) {
+                numeroOrdenados[k] = numerosFaltan[i];
+                // avanzamos al siguiente hueco
+                k++;
+            }
+        }
 
         System.out.println(Arrays.toString(numerosFaltan));
 
